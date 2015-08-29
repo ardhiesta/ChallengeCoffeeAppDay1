@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.justjava.CoffeeActivity">
+
+    <TextView android:text="Price Cofee" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:inputType="number"
+        android:id="@+id/tvPrice"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPrice"
+        android:text="0"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/tvPrice"
+        />
+    <TextView android:text="Order"
+        android:id="@+id/tvOrder"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_below="@+id/etPrice"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvOrder"
+        android:id="@+id/llOrder"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:layout_marginRight="12dp"
+            android:id="@+id/bMinus"
+            android:onClick="decrementQty"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQty"
+            android:layout_marginRight="12dp"
+            android:text="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/bPlus"
+            android:onClick="incrementQty"
+            />
+    </LinearLayout>
+    <TextView android:text="Total Price" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:layout_below="@+id/llOrder"
+        android:id="@+id/tvTotal"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTotal"
+        android:editable="false"
+        android:layout_below="@+id/tvTotal"
+        />
+
+</RelativeLayout>
